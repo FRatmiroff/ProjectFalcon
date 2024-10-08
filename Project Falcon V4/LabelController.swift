@@ -1,31 +1,25 @@
 //
-//  ViewController.swift
+//  LabelController.swift
 //  Project Falcon V4
 //
-//  Created by Frank Ratmiroff on 8/30/24.
+//  Created by Dominic Durso on 10/7/24.
 //
-
 import UIKit
+class LabelController: ViewController {
 
-class ViewController: UIViewController {
-    /*
-    var webScraper: Scraper!
-    var parseChunk: ParseChunk!
-    @IBOutlet weak var scheduleLabel: UILabel!
+    
+    @IBOutlet weak var sheduleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateScheduleLabel()
-        webScraper = Scraper()
-        //    parseChunk = ParseChunk()
-        
-        // Start scraping and printing from the WebScraper class
-        webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
     }
     
-
-
+    
+    
     // Function to update the label text based on the day of the week
     func updateScheduleLabel() {
+        scheduleLabel.text = "Normal Schedule"
+        /*
         // Get the current day of the week (Sunday = 1, Monday = 2, ..., Saturday = 7)
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: Date())
@@ -40,14 +34,10 @@ class ViewController: UIViewController {
             scheduleLabel.text = "Late Start Schedule"
         default:
             scheduleLabel.text = "No Schedule Available"
-        }
-    }*/
- 
-    
-    
-    
-    
+        }*/
+        
+        
+        
+        
+    }
 }
-
-
-

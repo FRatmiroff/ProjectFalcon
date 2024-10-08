@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62791A7A2CAD8066008EE058 /* CycleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A792CAD805C008EE058 /* CycleDays.swift */; };
+		62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7B2CAD8114008EE058 /* TimeFrame.swift */; };
+		62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7D2CAD83B9008EE058 /* TimePeriod.swift */; };
+		62791A802CB43AD6008EE058 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7F2CB43AC5008EE058 /* LabelController.swift */; };
 		AF4B52312C81FBC8008658E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52302C81FBC8008658E4 /* AppDelegate.swift */; };
 		AF4B52332C81FBC8008658E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52322C81FBC8008658E4 /* SceneDelegate.swift */; };
 		AF4B52352C81FBC8008658E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52342C81FBC8008658E4 /* ViewController.swift */; };
@@ -28,7 +32,6 @@
 		AF4B52792C90F0AE008658E4 /* CommunityIcon23px.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4B52782C90F0AE008658E4 /* CommunityIcon23px.png */; };
 		AF4B527F2C90F2D4008658E4 /* DiningIcon23px.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4B527E2C90F2D4008658E4 /* DiningIcon23px.png */; };
 		AF4B52812C934070008658E4 /* Shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4B52802C934070008658E4 /* Shadow.png */; };
-		AF4B52852C934A46008658E4 /* ShadowUpsideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4B52842C934A46008658E4 /* ShadowUpsideDown.png */; };
 		AF4B52872C934C0E008658E4 /* APP ICON 1024px.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4B52862C934C0E008658E4 /* APP ICON 1024px.png */; };
 		AF4B52892C934D2A008658E4 /* UnderConstruction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AF4B52882C934D2A008658E4 /* UnderConstruction.jpeg */; };
 		AF4B528D2C9DA10A008658E4 /* ParseDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */; };
@@ -55,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62791A792CAD805C008EE058 /* CycleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDays.swift; sourceTree = "<group>"; };
+		62791A7B2CAD8114008EE058 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
+		62791A7D2CAD83B9008EE058 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
+		62791A7F2CB43AC5008EE058 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
 		AF4B522D2C81FBC8008658E4 /* Project Falcon V4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Falcon V4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B52302C81FBC8008658E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4B52322C81FBC8008658E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +87,6 @@
 		AF4B52782C90F0AE008658E4 /* CommunityIcon23px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CommunityIcon23px.png; sourceTree = "<group>"; };
 		AF4B527E2C90F2D4008658E4 /* DiningIcon23px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiningIcon23px.png; sourceTree = "<group>"; };
 		AF4B52802C934070008658E4 /* Shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shadow.png; sourceTree = "<group>"; };
-		AF4B52842C934A46008658E4 /* ShadowUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShadowUpsideDown.png; path = ../../../Assets/ShadowUpsideDown.png; sourceTree = "<group>"; };
 		AF4B52862C934C0E008658E4 /* APP ICON 1024px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP ICON 1024px.png"; sourceTree = "<group>"; };
 		AF4B52882C934D2A008658E4 /* UnderConstruction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UnderConstruction.jpeg; sourceTree = "<group>"; };
 		AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDay2.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 				AF4B52302C81FBC8008658E4 /* AppDelegate.swift */,
 				AF4B52322C81FBC8008658E4 /* SceneDelegate.swift */,
 				AF4B52342C81FBC8008658E4 /* ViewController.swift */,
+				62791A7F2CB43AC5008EE058 /* LabelController.swift */,
 				AF4B52362C81FBC8008658E4 /* Main.storyboard */,
 				AF4B52652C876288008658E4 /* Assets */,
 				AF4B523C2C81FBC8008658E4 /* Assets.xcassets */,
@@ -174,7 +181,6 @@
 				AF4B52662C876333008658E4 /* Screenshot 2024-09-03 at 11.19.43 AM.png */,
 				AF4B52862C934C0E008658E4 /* APP ICON 1024px.png */,
 				AF4B52882C934D2A008658E4 /* UnderConstruction.jpeg */,
-				AF4B52842C934A46008658E4 /* ShadowUpsideDown.png */,
 				AF4B52802C934070008658E4 /* Shadow.png */,
 				AF4B52722C8B46A5008658E4 /* black.jpeg */,
 				AF4B52682C88E151008658E4 /* Events icon.png */,
@@ -192,9 +198,12 @@
 		AF4B528B2C9D9FF1008658E4 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				62791A7D2CAD83B9008EE058 /* TimePeriod.swift */,
+				62791A7B2CAD8114008EE058 /* TimeFrame.swift */,
+				62791A792CAD805C008EE058 /* CycleDays.swift */,
 				AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */,
-				AF4B528E2CA33BE2008658E4 /* Scraper.swift */,
 				AF4B52902CA33E2F008658E4 /* ParseChunk.swift */,
+				AF4B528E2CA33BE2008658E4 /* Scraper.swift */,
 				AF4B52922CA3418C008658E4 /* ParseDay.swift */,
 			);
 			path = Scripts;
@@ -264,7 +273,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					AF4B522C2C81FBC8008658E4 = {
 						CreatedOnToolsVersion = 15.4;
@@ -315,7 +324,6 @@
 				AF4B52772C90EFD1008658E4 /* CommunityIconSelected23px.png in Resources */,
 				AF4B526B2C88E245008658E4 /* Events icon46px.png in Resources */,
 				AF4B52402C81FBC8008658E4 /* Base in Resources */,
-				AF4B52852C934A46008658E4 /* ShadowUpsideDown.png in Resources */,
 				AF4B52382C81FBC8008658E4 /* Base in Resources */,
 				AF4B52692C88E151008658E4 /* Events icon.png in Resources */,
 				AF4B52892C934D2A008658E4 /* UnderConstruction.jpeg in Resources */,
@@ -345,10 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */,
+				62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */,
 				AF4B523B2C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld in Sources */,
 				AF4B52352C81FBC8008658E4 /* ViewController.swift in Sources */,
+				62791A802CB43AD6008EE058 /* LabelController.swift in Sources */,
 				AF4B52932CA3418C008658E4 /* ParseDay.swift in Sources */,
 				AF4B52912CA33E2F008658E4 /* ParseChunk.swift in Sources */,
+				62791A7A2CAD8066008EE058 /* CycleDays.swift in Sources */,
 				AF4B528F2CA33BE2008658E4 /* Scraper.swift in Sources */,
 				AF4B52312C81FBC8008658E4 /* AppDelegate.swift in Sources */,
 				AF4B528D2C9DA10A008658E4 /* ParseDay2.swift in Sources */,
@@ -586,7 +598,6 @@
 		AF4B525E2C81FBC9008658E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -606,7 +617,6 @@
 		AF4B525F2C81FBC9008658E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -626,7 +636,6 @@
 		AF4B52612C81FBC9008658E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F7HH7Y936S;
@@ -644,7 +653,6 @@
 		AF4B52622C81FBC9008658E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F7HH7Y936S;
