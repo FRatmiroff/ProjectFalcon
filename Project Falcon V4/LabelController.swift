@@ -8,7 +8,8 @@ import UIKit
 class LabelController: ViewController {
 
     
-    @IBOutlet weak var sheduleLabel: UILabel!
+    
+    @IBOutlet weak var lab: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateScheduleLabel()
@@ -18,8 +19,7 @@ class LabelController: ViewController {
     
     // Function to update the label text based on the day of the week
     func updateScheduleLabel() {
-        scheduleLabel.text = "Normal Schedule"
-        /*
+        
         // Get the current day of the week (Sunday = 1, Monday = 2, ..., Saturday = 7)
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: Date())
@@ -27,14 +27,14 @@ class LabelController: ViewController {
         // Determine the schedule based on the day of the week
         switch weekday {
         case 2, 3, 6: // Monday (2), Tuesday (3), Friday (6)
-            scheduleLabel.text = "Normal Schedule"
+            lab.text = "Normal Schedule"
         case 5: // Thursday (5)
-            scheduleLabel.text = "Dress Uniform Schedule"
+            lab.text = "Dress Uniform Schedule"
         case 4: // Wednesday (4)
-            scheduleLabel.text = "Late Start Schedule"
+            lab.text = "Late Start Schedule"
         default:
-            scheduleLabel.text = "No Schedule Available"
-        }*/
+            lab.text = "No Schedule Available"
+        }
         
         
         
