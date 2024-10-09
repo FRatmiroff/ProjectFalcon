@@ -24,17 +24,7 @@ enum TimeFrame{
             
         }
     }
- /*   func getDayTimes() -> [Int] {
-        switch self {
-            case .MON: return [800, 810, 815, 915, 925, 1025, 1030, 1105, 1110, 1255, 1305, 1405, 1415, 1515]
-            case .TUES: return []
-            case .WED: return []
-            case .THURS: return []
-            case .FRI: return []
-                            
-        }
-    }
-    */
+
     
     
     
