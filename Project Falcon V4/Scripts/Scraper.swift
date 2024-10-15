@@ -46,12 +46,6 @@ class Scraper: NSObject, WKNavigationDelegate {
         if let data = scrapedData {
             print("Scraped Data: \(data)")
             
-//            let parsedList = parseToList(from: scrapedData)
-//
-//            // Print out the parsed list
-//            for (index, line) in parsedList.enumerated() {
-//                if(
-//            }
             
         }
     }

@@ -11,6 +11,9 @@
 		62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7B2CAD8114008EE058 /* TimeFrame.swift */; };
 		62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7D2CAD83B9008EE058 /* TimePeriod.swift */; };
 		62791A802CB43AD6008EE058 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7F2CB43AC5008EE058 /* LabelController.swift */; };
+		68005FEF2CB99AB10070AD2A /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 68005FEE2CB99AB10070AD2A /* SwiftSoup */; };
+		686C2E752CBE99B700EA2F07 /* DiningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C2E742CBE99B200EA2F07 /* DiningController.swift */; };
+		688E0B8A2CBB1CCC00DABCE5 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 688E0B892CBB1CCC00DABCE5 /* SwiftSoup */; };
 		AF4B52312C81FBC8008658E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52302C81FBC8008658E4 /* AppDelegate.swift */; };
 		AF4B52332C81FBC8008658E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52322C81FBC8008658E4 /* SceneDelegate.swift */; };
 		AF4B52352C81FBC8008658E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B52342C81FBC8008658E4 /* ViewController.swift */; };
@@ -62,6 +65,7 @@
 		62791A7B2CAD8114008EE058 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
 		62791A7D2CAD83B9008EE058 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		62791A7F2CB43AC5008EE058 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
+		686C2E742CBE99B200EA2F07 /* DiningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningController.swift; sourceTree = "<group>"; };
 		AF4B522D2C81FBC8008658E4 /* Project Falcon V4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Falcon V4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B52302C81FBC8008658E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4B52322C81FBC8008658E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68005FEF2CB99AB10070AD2A /* SwiftSoup in Frameworks */,
+				688E0B8A2CBB1CCC00DABCE5 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +204,7 @@
 		AF4B528B2C9D9FF1008658E4 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				686C2E742CBE99B200EA2F07 /* DiningController.swift */,
 				62791A7D2CAD83B9008EE058 /* TimePeriod.swift */,
 				62791A7B2CAD8114008EE058 /* TimeFrame.swift */,
 				62791A792CAD805C008EE058 /* CycleDays.swift */,
@@ -297,6 +304,9 @@
 				Base,
 			);
 			mainGroup = AF4B52242C81FBC8008658E4;
+			packageReferences = (
+				68005FEB2CB999D90070AD2A /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = AF4B522E2C81FBC8008658E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686C2E752CBE99B700EA2F07 /* DiningController.swift in Sources */,
 				62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */,
 				62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */,
 				AF4B523B2C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld in Sources */,
@@ -707,6 +718,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68005FEB2CB999D90070AD2A /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68005FEE2CB99AB10070AD2A /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68005FEB2CB999D90070AD2A /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		688E0B892CBB1CCC00DABCE5 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68005FEB2CB999D90070AD2A /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AF4B52392C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld */ = {

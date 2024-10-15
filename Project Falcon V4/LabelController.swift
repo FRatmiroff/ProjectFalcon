@@ -5,7 +5,7 @@
 //  Created by Dominic Durso on 10/7/24.
 //
 import UIKit
-class LabelController: ViewController {
+class LabelController: UIViewController {
 
     
     
@@ -35,9 +35,6 @@ class LabelController: ViewController {
         default:
             lab.text = "No Schedule Available"
         }
-        
-        
-        
         
     }
 }
