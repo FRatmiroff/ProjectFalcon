@@ -45,17 +45,22 @@ class ParseDay: NSObject {
     
 
     func getCycleDay() -> Int {
-
         if let range = _chunk.range(of: "CYCLE DAY") {
-
-            let substring = _chunk[range]
-
-            print(substring)
-
+            // Try to get the index 2 characters after "CYCLE DAY"
+            if let endIndex = _chunk.index(range.upperBound, offsetBy: 2, limitedBy: _chunk.endIndex) {
+                let extendedRange = range.lowerBound..<endIndex
+                let substring = _chunk[extendedRange]
+                print(substring)
+                
+                // Separate the substring by spaces and try to get the last component (which should be the number)
+                let components = substring.components(separatedBy: " ")
+                if let dayString = components.last, let cycleDay = Int(dayString) {
+                    print(cycleDay)
+                    return cycleDay
+                }
+            }
         }
-
-        return 0
-
+        return 0 // Return 0 if something goes wrong
     }
 
 }
