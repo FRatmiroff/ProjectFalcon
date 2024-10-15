@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626EDFEE2CBE995000B8ACBF /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626EDFED2CBE994500B8ACBF /* Interpreter.swift */; };
+		626EDFF02CBE995F00B8ACBF /* DayTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626EDFEF2CBE995700B8ACBF /* DayTypes.swift */; };
 		62791A7A2CAD8066008EE058 /* CycleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A792CAD805C008EE058 /* CycleDays.swift */; };
 		62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7B2CAD8114008EE058 /* TimeFrame.swift */; };
 		62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7D2CAD83B9008EE058 /* TimePeriod.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		626EDFED2CBE994500B8ACBF /* Interpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+		626EDFEF2CBE995700B8ACBF /* DayTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTypes.swift; sourceTree = "<group>"; };
 		62791A792CAD805C008EE058 /* CycleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDays.swift; sourceTree = "<group>"; };
 		62791A7B2CAD8114008EE058 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
 		62791A7D2CAD83B9008EE058 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
@@ -198,13 +202,15 @@
 		AF4B528B2C9D9FF1008658E4 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */,
+				AF4B528E2CA33BE2008658E4 /* Scraper.swift */,
+				AF4B52902CA33E2F008658E4 /* ParseChunk.swift */,
+				AF4B52922CA3418C008658E4 /* ParseDay.swift */,
+				62791A792CAD805C008EE058 /* CycleDays.swift */,
+				626EDFED2CBE994500B8ACBF /* Interpreter.swift */,
+				626EDFEF2CBE995700B8ACBF /* DayTypes.swift */,
 				62791A7D2CAD83B9008EE058 /* TimePeriod.swift */,
 				62791A7B2CAD8114008EE058 /* TimeFrame.swift */,
-				62791A792CAD805C008EE058 /* CycleDays.swift */,
-				AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */,
-				AF4B52902CA33E2F008658E4 /* ParseChunk.swift */,
-				AF4B528E2CA33BE2008658E4 /* Scraper.swift */,
-				AF4B52922CA3418C008658E4 /* ParseDay.swift */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -355,9 +361,11 @@
 			files = (
 				62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */,
 				62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */,
+				626EDFF02CBE995F00B8ACBF /* DayTypes.swift in Sources */,
 				AF4B523B2C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld in Sources */,
 				AF4B52352C81FBC8008658E4 /* ViewController.swift in Sources */,
 				62791A802CB43AD6008EE058 /* LabelController.swift in Sources */,
+				626EDFEE2CBE995000B8ACBF /* Interpreter.swift in Sources */,
 				AF4B52932CA3418C008658E4 /* ParseDay.swift in Sources */,
 				AF4B52912CA33E2F008658E4 /* ParseChunk.swift in Sources */,
 				62791A7A2CAD8066008EE058 /* CycleDays.swift in Sources */,

@@ -39,6 +39,7 @@ class LabelController: ViewController {
         switch weekday {
         case 2, 3, 6: // Monday (2), Tuesday (3), Friday (6)
             lab.text = "Normal Schedule"
+            descLabel.text = ""
         case 5: // Thursday (5)
             lab.text = "Dress Uniform Schedule"
             descLabel.text = "- No Advisory"
