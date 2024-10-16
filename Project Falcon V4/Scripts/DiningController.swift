@@ -34,13 +34,13 @@ class DiningController: UIViewController, WKNavigationDelegate {
         webView.translatesAutoresizingMaskIntoConstraints = false
         
         // Set constraints for the web view to be within the safe area
-                NSLayoutConstraint.activate([
-                    webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-                    webView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-                    webView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-                    webView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-                ])
-
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            webView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
         
         // Start loading the web page
         if let url = URL(string: "https://www.sagedining.com/sites/palmertrinity/menu") { // Replace with your target URL
@@ -95,5 +95,6 @@ class DiningController: UIViewController, WKNavigationDelegate {
             print("Error parsing HTML: \(error.localizedDescription)")
         }
     }
+
 }
 
