@@ -18,7 +18,10 @@ class DiningController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initialize the WKWebView
+        showMenu()
+    }
+    
+    func showMenu() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +47,13 @@ class DiningController: UIViewController, WKNavigationDelegate {
             let request = URLRequest(url: url)
             webView.load(request)
         }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        
+        showMenu()
     }
     
     // WKNavigationDelegate method to know when the page has finished loading

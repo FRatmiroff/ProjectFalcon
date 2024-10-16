@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="05a-o5-lDy">
             <objects>
-                <tabBarController id="var-V6-tjc" sceneMemberID="viewController">
+                <tabBarController id="var-V6-tjc" customClass="TabBarController" customModule="Project_Falcon_V4" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="black.jpeg" id="KaO-GY-Xhq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,6 +33,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHH-e3-hkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="9wh-gQ-qxM" userLabel="DiningSwiper" customClass="DiningSwiper" customModule="Project_Falcon_V4" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-240" y="646"/>
         </scene>
@@ -291,7 +292,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej9-ix-Rex">
-                                <rect key="frame" x="116" y="54" width="160" height="15"/>
+                                <rect key="frame" x="114" y="58" width="160" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
