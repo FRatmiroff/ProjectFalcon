@@ -5,17 +5,28 @@
 //  Created by Dominic Durso on 10/7/24.
 //
 import UIKit
-class LabelController: UIViewController {
+import WebKit
+import SwiftSoup
+class LabelController: UIViewController, WKNavigationDelegate {
 
-    
+    var webScraper: Scraper!
+    var diningScraper : Scraper!
+    var parseChunk: ParseChunk!
     
     @IBOutlet weak var lab: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateScheduleLabel()
         
+        updateScheduleLabel()
+        webScraper = Scraper()
+        parseChunk = ParseChunk()
+        
+        parseChunk.parseMonth()
+        
+        // Start scraping and printing from the WebScraper class
+        webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
     }
     
     

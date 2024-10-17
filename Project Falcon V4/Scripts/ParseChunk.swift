@@ -11,6 +11,7 @@ import Foundation
 class ParseChunk: NSObject {
     private var _parsedDay : [ParseDay] = []
     private var todayIndex : Int = 0
+    private var _periods : [String] = []
     private var inputString = """
     MyPTS Login
     ABOUT
@@ -1189,8 +1190,14 @@ class ParseChunk: NSObject {
             let currentCycleDay = _parsedDay[todayIndex].getCycleDay()
             let currentCD = CycleDays.match(day: currentCycleDay)
             let periods = currentCD.getPeriods()
+            _periods = periods
             return _parsedDay[todayIndex].getCycleDay()
+            
         }
         return 0
+    }
+    
+    func getPeriods() -> [String] {
+        return _periods
     }
 }
