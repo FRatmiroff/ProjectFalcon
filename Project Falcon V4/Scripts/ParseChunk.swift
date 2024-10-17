@@ -1121,7 +1121,7 @@ class ParseChunk: NSObject {
                 if !currentDay.isEmpty {
                     _parsedDays.append(currentDay)
                     let temp = ParseDay(day: index + 1, month: "OCT", chunk: currentDay)
-                    temp.getCycleDay()
+                //    temp.getCycleDay()
                     _parsedDay.append(temp)
                 }
                 
