@@ -2,20 +2,32 @@
 //  CycleDays.swift
 //  Project Falcon V4
 //
-//  Created by Dominic Durso on 10/2/24.
+//  Created by Frank Ratmiroff on 10/8/24.
 //
 
 enum CycleDays{
     
-    case CD1(day: Int, periods: [String])
-    case CD2(day: Int, periods: [String])
-    case CD3(day: Int, periods: [String])
-    case CD4(day: Int, periods: [String])
-    case CD5(day: Int, periods: [String])
-    case CD6(day: Int, periods: [String])
-    case CD7(day: Int, periods: [String])
+    case CD1(day: Int)
+    case CD2(day: Int)
+    case CD3(day: Int)
+    case CD4(day: Int)
+    case CD5(day: Int)
+    case CD6(day: Int)
+    case CD7(day: Int)
     case NOCD
     
+    static func match(day: Int) -> CycleDays {
+        switch day {
+        case 1: return .CD1(day: 1)
+        case 2: return .CD2(day: 2)
+        case 3: return .CD3(day: 3)
+        case 4: return .CD4(day: 4)
+        case 5: return .CD5(day: 5)
+        case 6: return .CD6(day: 6)
+        case 7: return .CD7(day: 7)
+        default: return .NOCD
+        }
+    }
     func getCycleDay() -> Int{
         switch self {
         case .CD1: return 1

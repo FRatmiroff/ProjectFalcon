@@ -10,6 +10,8 @@ import Foundation
 
 class ParseChunk: NSObject {
     private var _parsedDay : [ParseDay] = []
+    private var todayIndex : Int = 0
+    private var _periods : [String] = []
     private var inputString = """
     MyPTS Login
     ABOUT
@@ -1079,9 +1081,9 @@ class ParseChunk: NSObject {
 //    func parseMonth(scrapedData: String) {
 //        var lines : [String] = []
 //        let stringArray = scrapedData.components(separatedBy: "\n")
-//        
+//
 //        var index = 0;
-//        
+//
 //        while index < stringArray.count {
 //            lines.append(stringArray[index])
 //            index += 1
@@ -1091,14 +1093,14 @@ class ParseChunk: NSObject {
 //    func parseMonth() {
 //        var lines : [String] = []
 //        let stringArray = inputString.components(separatedBy: "\n")
-//        
+//
 //        var index = 0;
-//        
+//
 //        while index < stringArray.count {
 //            lines.append(stringArray[index])
 //            index += 1
 //        }
-//        
+//
 //        print(lines)
 //    }
     
@@ -1106,6 +1108,7 @@ class ParseChunk: NSObject {
         var _parsedDays: [String] = []
         let stringArray = inputString.components(separatedBy: "\n")
         
+        var daysCount: Int = 0
         var currentDay: String = ""
         var index = 0
         var parsingDays = false // Flag to start parsing after the first day is detected
@@ -1120,9 +1123,24 @@ class ParseChunk: NSObject {
                 // If we are already storing lines for a previous day, add it to _parsedDays
                 if !currentDay.isEmpty {
                     _parsedDays.append(currentDay)
-                    let temp = ParseDay(day: index + 1, month: "OCT", chunk: currentDay)
-                    temp.getCycleDay()
-                    _parsedDay.append(temp)
+                    if let dayNumber = extractDay(from: line, withMonth: "OCT") {
+                        let temp = ParseDay(day: dayNumber, month: "OCT", chunk: currentDay)
+                        temp.getCycleDay()
+                        _parsedDay.append(temp)
+                        daysCount += 1
+                        let day = Calendar.current.component(.day, from: Date())
+                        // print(dayNumber)
+                        // print(day)
+                        if dayNumber == day && daysCount > 0 {
+                            todayIndex = daysCount
+//                            print(day)
+//                            print(dayNumber)
+                            // print("DAYS COUNT \(daysCount)")
+                        }
+                    }
+                    
+                    // let day = Calendar.current.component(.day, from: Date())
+                    
                 }
                 
                 // Start a new day with the current line
@@ -1145,11 +1163,41 @@ class ParseChunk: NSObject {
             _parsedDays.append(currentDay)
         }
         
+        // print(_parsedDays[10])
         // Now _parsedDays should only contain relevant day data
         var i = 0
-        while i < _parsedDays.count {
-            print(_parsedDays[i])
-            i += 1
+//        while i < _parsedDays.count {
+////            print(_parsedDays[i])
+////            i += 1
+//        }
+        
+        print("ran")
+        let X = getCurrentCycleDay()
+        print("after X")
+    }
+    
+    func extractDay(from line: String, withMonth monthAbbreviation: String) -> Int? {
+        let dayString = line.replacingOccurrences(of: monthAbbreviation, with: "")
+        
+        if let dayNumber = Int(dayString.prefix(while: { $0.isNumber })) {
+            return dayNumber
         }
+        return nil
+    }
+    
+    func getCurrentCycleDay() -> Int {
+        if todayIndex > 0 {
+            let currentCycleDay = _parsedDay[todayIndex].getCycleDay()
+            let currentCD = CycleDays.match(day: currentCycleDay)
+            let periods = currentCD.getPeriods()
+            _periods = periods
+            return _parsedDay[todayIndex].getCycleDay()
+            
+        }
+        return 0
+    }
+    
+    func getPeriods() -> [String] {
+        return _periods
     }
 }
