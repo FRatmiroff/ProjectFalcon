@@ -52,49 +52,15 @@ class DiningController: UIViewController, WKNavigationDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
-        
         showMenu()
     }
     
+    
+/*
     // WKNavigationDelegate method to know when the page has finished loading
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("Page loaded")
-        extractContent()
+        //print("Page loaded")
     }
-    
-    func extractContent() {
-        // JavaScript to extract desired content
-        let js = "document.body.innerHTML" // Modify this JS as needed
-        
-        webView.evaluateJavaScript(js) { (result, error) in
-            if let error = error {
-                print("Error extracting content: \(error.localizedDescription)")
-                return
-            }
-            
-            if let html = result as? String {
-                print("Extracted HTML: \(html)")
-                // Process the HTML as needed, e.g., parse with SwiftSoup
-                self.parseHTML(html)
-            }
-        }
-    }
-    
-    func parseHTML(_ html: String) {
-        // Optionally, use a library like SwiftSoup to parse HTML
-        do {
-            let document = try SwiftSoup.parse(html)
-            // Example: Extract all links
-            let links = try document.select("a[href]")
-            for link in links.array() {
-                let href = try link.attr("href")
-                let text = try link.text()
-                print("Link: \(text) - \(href)")
-            }
-        } catch {
-            print("Error parsing HTML: \(error.localizedDescription)")
-        }
-    }
-
+*/
 }
 

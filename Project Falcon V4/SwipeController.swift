@@ -23,7 +23,6 @@ class SwipeController : UITabBarController {
     }
     
     @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
-        print("message received?")
         
         if gesture.direction == .left {
             if selectedIndex < (viewControllers?.count ?? 0) - 1 {
