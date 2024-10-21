@@ -16,15 +16,16 @@ class LabelController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var lab: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var periods: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateScheduleLabel()
+       
         webScraper = Scraper()
         parseChunk = ParseChunk()
         
         parseChunk.parseMonth()
-        
+        updateScheduleLabel()
         // Start scraping and printing from the WebScraper class
         webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
     }
@@ -51,15 +52,26 @@ class LabelController: UIViewController, WKNavigationDelegate {
         case 2, 3, 6: // Monday (2), Tuesday (3), Friday (6)
             lab.text = "Normal Schedule"
             descLabel.text = ""
+            periods.text = getLabelString()
         case 5: // Thursday (5)
             lab.text = "Dress Uniform Schedule"
             descLabel.text = "- No Advisory"
+            periods.text = getLabelString()
         case 4: // Wednesday (4)
             lab.text = "Late Start Schedule"
             descLabel.text = "- No Advisory\n- No Flex"
+            periods.text = getLabelString()
         default:
             lab.text = "No Schedule Available"
         }
         
+    }
+    func getLabelString() -> String {
+        var ret: String = ""
+        let per = parseChunk.getPeriods()
+        for String in per {
+            ret += String + " "
+        }
+        return ret
     }
 }

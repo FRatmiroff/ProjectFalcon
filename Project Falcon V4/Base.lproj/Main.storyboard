@@ -298,6 +298,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Periods" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-aO-BLz">
+                                <rect key="frame" x="16" y="155" width="361" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="03y-10-UVe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -320,6 +327,7 @@
                         <outlet property="dateLabel" destination="Ej9-ix-Rex" id="Fca-79-q0q"/>
                         <outlet property="descLabel" destination="xQc-QB-a9d" id="d1Q-Hq-Kcb"/>
                         <outlet property="lab" destination="pH2-Bw-3Dd" id="a46-0r-mJn"/>
+                        <outlet property="periods" destination="n8Q-aO-BLz" id="Dbq-ML-yN9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6m-Qf-wPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1171,9 +1171,9 @@ class ParseChunk: NSObject {
 ////            i += 1
 //        }
         
-        print("ran")
+     //   print("ran")
         let X = getCurrentCycleDay()
-        print("after X")
+    //    print("after X")
     }
     
     func extractDay(from line: String, withMonth monthAbbreviation: String) -> Int? {
@@ -1191,6 +1191,7 @@ class ParseChunk: NSObject {
             let currentCD = CycleDays.match(day: currentCycleDay)
             let periods = currentCD.getPeriods()
             _periods = periods
+            print(_periods)
             return _parsedDay[todayIndex].getCycleDay()
             
         }
@@ -1198,6 +1199,8 @@ class ParseChunk: NSObject {
     }
     
     func getPeriods() -> [String] {
+        
+        print (_periods)
         return _periods
     }
 }
