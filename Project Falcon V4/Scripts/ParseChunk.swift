@@ -1188,7 +1188,7 @@ class ParseChunk: NSObject {
     func getCurrentCycleDay() -> Int {
         if todayIndex > 0 {
             let currentCycleDay = _parsedDay[todayIndex].getCycleDay()
-            let currentCD = CycleDays.match(day: currentCycleDay)
+           let currentCD = CycleDays.match(day: currentCycleDay)
             let periods = currentCD.getPeriods()
             _periods = periods
             print(_periods)

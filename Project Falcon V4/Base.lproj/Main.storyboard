@@ -246,21 +246,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFf-FH-P2c">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFf-FH-P2c">
                                 <rect key="frame" x="29" y="58" width="166" height="55"/>
+                                <color key="tintColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="0Ma-wk-42k"/>
                                     <constraint firstAttribute="width" secondItem="LFf-FH-P2c" secondAttribute="height" multiplier="166:55" id="DOy-bR-4sN"/>
                                     <constraint firstAttribute="height" constant="55" id="K1H-lC-rHP"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Home">
-                                        <attributes>
-                                            <font key="NSFont" size="48" name="TrebuchetMS-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="49"/>
+                                <color key="textColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="PUp-45-eSL">
                                 <rect key="frame" x="-13" y="544" width="462" height="308"/>
@@ -281,30 +277,34 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="scheduleLabel" text="Day Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-Bw-3Dd" userLabel="scheduleLabel">
                                 <rect key="frame" x="100" y="121" width="193" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-QB-a9d">
                                 <rect key="frame" x="11" y="223" width="366" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej9-ix-Rex">
                                 <rect key="frame" x="114" y="58" width="160" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Periods" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-aO-BLz">
                                 <rect key="frame" x="16" y="155" width="361" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="53"/>
+                                <color key="textColor" red="0.05882352591" green="0.1725490093" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="APP ICON 1024px.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyT-Gt-xry">
+                                <rect key="frame" x="11" y="323" width="370" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="03y-10-UVe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -336,6 +336,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="APP ICON 1024px.png" width="384" height="384"/>
         <image name="CommunityIcon23px.png" width="5.5199999809265137" height="5.5199999809265137"/>
         <image name="DiningIcon23px.png" width="5.5199999809265137" height="5.5199999809265137"/>
         <image name="Events icon23px.png" width="11.5" height="11.5"/>

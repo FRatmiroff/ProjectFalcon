@@ -11,6 +11,8 @@
 		62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7B2CAD8114008EE058 /* TimeFrame.swift */; };
 		62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7D2CAD83B9008EE058 /* TimePeriod.swift */; };
 		62791A802CB43AD6008EE058 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7F2CB43AC5008EE058 /* LabelController.swift */; };
+		62AA6F8E2CCBEFD500C019E2 /* pts.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 62AA6F8D2CCBEFD500C019E2 /* pts.jpeg */; };
+		62AA6F902CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62AA6F8F2CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf */; };
 		68005FEF2CB99AB10070AD2A /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 68005FEE2CB99AB10070AD2A /* SwiftSoup */; };
 		686C2E852CC035CD00EA2F07 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C2E842CC035BF00EA2F07 /* SwipeController.swift */; };
 		688E0B8A2CBB1CCC00DABCE5 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 688E0B892CBB1CCC00DABCE5 /* SwiftSoup */; };
@@ -65,6 +67,8 @@
 		62791A7B2CAD8114008EE058 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
 		62791A7D2CAD83B9008EE058 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		62791A7F2CB43AC5008EE058 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
+		62AA6F8D2CCBEFD500C019E2 /* pts.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pts.jpeg; sourceTree = "<group>"; };
+		62AA6F8F2CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adobe Garamond Pro Regular.ttf"; sourceTree = "<group>"; };
 		686C2E842CC035BF00EA2F07 /* SwipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
 		AF4B522D2C81FBC8008658E4 /* Project Falcon V4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Falcon V4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B52302C81FBC8008658E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				AF4B523C2C81FBC8008658E4 /* Assets.xcassets */,
 				AF4B523E2C81FBC8008658E4 /* LaunchScreen.storyboard */,
 				AF4B52412C81FBC8008658E4 /* Info.plist */,
+				62AA6F8F2CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf */,
 				AF4B52392C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld */,
 			);
 			path = "Project Falcon V4";
@@ -203,6 +208,7 @@
 				AF4B52702C8B43FD008658E4 /* homescreen icon filled 23px.png */,
 				AF4B52762C90EFD1008658E4 /* CommunityIconSelected23px.png */,
 				AF4B52782C90F0AE008658E4 /* CommunityIcon23px.png */,
+				62AA6F8D2CCBEFD500C019E2 /* pts.jpeg */,
 				AF4B527E2C90F2D4008658E4 /* DiningIcon23px.png */,
 			);
 			path = Assets;
@@ -338,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF4B52712C8B43FD008658E4 /* homescreen icon filled 23px.png in Resources */,
+				62AA6F8E2CCBEFD500C019E2 /* pts.jpeg in Resources */,
 				AF4B52732C8B46A5008658E4 /* black.jpeg in Resources */,
 				AF4B52812C934070008658E4 /* Shadow.png in Resources */,
 				AF4B52792C90F0AE008658E4 /* CommunityIcon23px.png in Resources */,
@@ -353,6 +360,7 @@
 				AF4B52892C934D2A008658E4 /* UnderConstruction.jpeg in Resources */,
 				AF4B52672C876333008658E4 /* Screenshot 2024-09-03 at 11.19.43 AM.png in Resources */,
 				AF4B52872C934C0E008658E4 /* APP ICON 1024px.png in Resources */,
+				62AA6F902CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
