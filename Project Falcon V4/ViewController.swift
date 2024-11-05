@@ -23,10 +23,12 @@
          super.viewDidLoad()
          updateScheduleLabel()
          webScraper = Scraper()
-         parseChunk = ParseChunk()
+         
          
          // Start scraping and printing from the WebScraper class
          webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
+         
+        
      }
   
   

@@ -10,13 +10,19 @@ import WebKit
 
 class Scraper: NSObject, WKNavigationDelegate {
     private var webView: WKWebView!
-    var scrapedData: String? // Property to hold the scraped data
+    var onDataScraped: ((String?) -> Void)?
     
     override init() {
         super.init()
         webView = WKWebView()
         webView.navigationDelegate = self
     }
+    
+    func scrapeData(from url: URL) {
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
+    
     
     // Load the webpage and scrape the content
     func loadWebsite(urlString: String) {
@@ -32,21 +38,22 @@ class Scraper: NSObject, WKNavigationDelegate {
         """
         webView.evaluateJavaScript(pageTitle) { [weak self] (result, error) in
             guard let self = self else { return }
-            if let result = result as? String {
-                self.scrapedData = result // Store the scraped data
-                self.printScrapedData() // Call a method to print the data
-            } else if let error = error {
-                print("Error: \(error.localizedDescription)")
+            if let data = result as? String {
+                
+                self.onDataScraped?(data)
+                
+            } else  {
+                self.onDataScraped?(nil)
             }
         }
     }
     
     // Method to print the scraped data
     func printScrapedData() {
-        if let data = scrapedData {
-           // print("Scraped Data: \(data)")
-            
-            
+        if let data = onDataScraped {
+           print("Scraped Data: \(data)")
+        } else {
+            print("No Valid Data Scraped")
         }
     }
 }

@@ -9,9 +9,11 @@ import WebKit
 import SwiftSoup
 class LabelController: UIViewController, WKNavigationDelegate {
 
-    var webScraper: Scraper!
+    var webScraper: Scraper?
     var diningScraper : Scraper!
     var parseChunk: ParseChunk!
+    
+    var scrapedDataString: String?
     
     @IBOutlet weak var lab: UILabel!
     @IBOutlet weak var descLabel: UILabel!
@@ -20,14 +22,44 @@ class LabelController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         webScraper = Scraper()
-        parseChunk = ParseChunk()
         
-        parseChunk.parseMonth()
-        updateScheduleLabel()
+        
+        webScraper?.onDataScraped = { [weak self] data in
+            guard let self = self, let scrapedData = data else { return }
+            
+            self.scrapedDataString = scrapedData
+            self.handleScrapedData(scrapedData)
+        }
+        
+        if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
+            webScraper?.scrapeData(from: url)
+        }
+        
+        
+        
+        
         // Start scraping and printing from the WebScraper class
+        
+        /*
         webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
+        */
+         
+        print("Home Screen Loaded")
+        
+        print("Second Check")
+        
+        
+    }
+    
+    func handleScrapedData(_ data: String) {
+        parseChunk = ParseChunk(scrapedData: data)
+        parseChunk.parseMonth()
+        parseChunk.printInput()
+        updateScheduleLabel()
+        //print("Scraped Data: \(data)")
+        
+
     }
     
     
@@ -66,9 +98,11 @@ class LabelController: UIViewController, WKNavigationDelegate {
         }
         
     }
+    
     func getLabelString() -> String {
         var ret: String = ""
         let per = parseChunk.getPeriods()
+        print(parseChunk.getPeriods())
         for String in per {
             ret += String + " "
         }
