@@ -1125,15 +1125,15 @@ class ParseChunk: NSObject {
             let line = stringArray[index].trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Check if the line starts with "{Month Name}"
-            if line.starts(with: "NOV") {
+            if line.starts(with: currentMonth) {
                 parsingDays = true // Start parsing from the first day onward
                 
                 // If we are already storing lines for a previous day, add it to _parsedDays
                 if !currentDay.isEmpty {
                     _parsedDays.append(currentDay)
-                    if let dayNumber = extractDay(from: line, withMonth: "NOV") {
+                    if let dayNumber = extractDay(from: line, withMonth: currentMonth) {
                         
-                        let temp = ParseDay(day: dayNumber, month: "NOV", chunk: currentDay)
+                        let temp = ParseDay(day: dayNumber, month: currentMonth, chunk: currentDay)
                         _parsedDay.append(temp)
                         daysCount += 1
                         
