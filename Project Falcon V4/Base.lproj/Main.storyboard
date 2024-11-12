@@ -181,7 +181,7 @@
         <!--Events-->
         <scene sceneID="hwy-cU-OuX">
             <objects>
-                <viewController id="W6m-Yv-dPQ" sceneMemberID="viewController">
+                <viewController id="W6m-Yv-dPQ" customClass="EventController" customModule="Project_Falcon_V4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3v-rK-9LG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +219,29 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hq5-fN-K19">
+                                <rect key="frame" x="0.0" y="215" width="393" height="329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7d-7Y-D8I" userLabel="EventsLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="g7d-7Y-D8I" secondAttribute="bottom" constant="308.67000000000002" id="0Zb-br-M9W"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7d-7Y-D8I" secondAttribute="trailing" constant="153" id="647-rV-iTB"/>
+                                    <constraint firstItem="g7d-7Y-D8I" firstAttribute="leading" secondItem="Hq5-fN-K19" secondAttribute="leading" id="MBc-yM-YUM"/>
+                                    <constraint firstItem="g7d-7Y-D8I" firstAttribute="leading" secondItem="ciz-Vv-VX8" secondAttribute="leading" id="awn-Ku-ncr"/>
+                                    <constraint firstItem="g7d-7Y-D8I" firstAttribute="top" secondItem="Hq5-fN-K19" secondAttribute="top" id="kmz-3L-VkY"/>
+                                    <constraint firstAttribute="bottom" secondItem="g7d-7Y-D8I" secondAttribute="bottom" constant="53" id="rLp-BU-ZjR"/>
+                                    <constraint firstItem="ciz-Vv-VX8" firstAttribute="trailing" secondItem="g7d-7Y-D8I" secondAttribute="trailing" id="wIA-aR-BXV"/>
+                                    <constraint firstItem="g7d-7Y-D8I" firstAttribute="top" secondItem="ciz-Vv-VX8" secondAttribute="top" id="xip-MH-F9w"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="WVR-kP-B05"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ciz-Vv-VX8"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K4j-a9-uMc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -228,15 +251,22 @@
                             <constraint firstItem="6rY-YY-wuz" firstAttribute="centerX" secondItem="E3v-rK-9LG" secondAttribute="centerX" id="NMA-mb-uxV"/>
                             <constraint firstItem="LYX-V8-oXs" firstAttribute="top" secondItem="E3v-rK-9LG" secondAttribute="topMargin" constant="-1" id="PIN-jN-SaF"/>
                             <constraint firstItem="kdJ-dJ-pJd" firstAttribute="leading" secondItem="E3v-rK-9LG" secondAttribute="leadingMargin" constant="-36" id="TEQ-KQ-mHo"/>
+                            <constraint firstItem="Hq5-fN-K19" firstAttribute="top" secondItem="6rY-YY-wuz" secondAttribute="bottom" id="fUZ-I0-3bJ"/>
+                            <constraint firstItem="Hq5-fN-K19" firstAttribute="leading" secondItem="K4j-a9-uMc" secondAttribute="leading" id="iln-gZ-Qzg"/>
                             <constraint firstItem="K4j-a9-uMc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LYX-V8-oXs" secondAttribute="trailing" symbolic="YES" id="lf2-MR-WdN"/>
+                            <constraint firstItem="kdJ-dJ-pJd" firstAttribute="top" secondItem="Hq5-fN-K19" secondAttribute="bottom" id="rS8-2L-4H5"/>
                             <constraint firstItem="LYX-V8-oXs" firstAttribute="leading" secondItem="K4j-a9-uMc" secondAttribute="leading" constant="29" id="v9X-F7-m4v"/>
+                            <constraint firstItem="K4j-a9-uMc" firstAttribute="trailing" secondItem="Hq5-fN-K19" secondAttribute="trailing" id="yyf-hZ-tou"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="Events icon23px.png" id="xgr-Xp-8F4"/>
+                    <connections>
+                        <outlet property="eLab" destination="g7d-7Y-D8I" id="d7C-Ud-xLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWX-oe-Ylp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-376" y="1402"/>
+            <point key="canvasLocation" x="-376.3358778625954" y="1401.4084507042255"/>
         </scene>
         <!--Home-->
         <scene sceneID="cC8-Q8-cvE">

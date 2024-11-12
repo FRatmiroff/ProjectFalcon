@@ -10,7 +10,6 @@ import SwiftSoup
 class LabelController: UIViewController, WKNavigationDelegate {
 
     var webScraper: Scraper?
-    var diningScraper : Scraper!
     var parseChunk: ParseChunk!
     
     var scrapedDataString: String?
@@ -55,7 +54,7 @@ class LabelController: UIViewController, WKNavigationDelegate {
     func handleScrapedData(_ data: String) {
         parseChunk = ParseChunk(scrapedData: data)
         parseChunk.parseMonth()
-        parseChunk.printInput()
+       // parseChunk.printInput()
         updateScheduleLabel()
         //print("Scraped Data: \(data)")
         
@@ -102,7 +101,7 @@ class LabelController: UIViewController, WKNavigationDelegate {
     func getLabelString() -> String {
         var ret: String = ""
         let per = parseChunk.getPeriods()
-        print(parseChunk.getPeriods())
+       // print(parseChunk.getPeriods())
         for String in per {
             ret += String + " "
         }
