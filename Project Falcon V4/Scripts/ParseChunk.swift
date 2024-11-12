@@ -65,12 +65,13 @@ class ParseChunk: NSObject {
             }
             
             // Gets all uppercased lines (for events)
-            /* else if line == line.uppercased() && line != "" {
-                print(line)
-                print("^This line is uppercased^")
-            } */
-            
-            else if parsingDays {
+             else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil {
+                 let temp = Event(name: line, dayNum: index + 1)
+                 print("Made an Event")
+                 print(temp.getName())
+                 print(temp.getDayNum())
+                 
+             } else if parsingDays {
                 // Add line to the current day only if we have started parsing days
                 currentDay += line + "\n"
                 
