@@ -10,6 +10,7 @@ import Foundation
 
 class ParseChunk: NSObject {
     private var _parsedDay : [ParseDay] = []
+    private var _events : [Event] = []
     private var todayIndex : Int = 0
     private var _periods : [String] = []
     private var inputString = ""
@@ -46,7 +47,6 @@ class ParseChunk: NSObject {
                 if !currentDay.isEmpty {
                     _parsedDays.append(currentDay)
                     if let dayNumber = extractDay(from: line, withMonth: currentMonth) {
-                        
                         let temp = ParseDay(day: dayNumber, month: currentMonth, chunk: currentDay)
                         _parsedDay.append(temp)
                         daysCount += 1
@@ -65,13 +65,12 @@ class ParseChunk: NSObject {
             }
             
             // Gets all uppercased lines (for events)
-             else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil {
-                 let temp = Event(name: line, dayNum: index + 1)
-                 print("Made an Event")
-                 print(temp.getName())
-                 print(temp.getDayNum())
-                 
-             } else if parsingDays {
+            else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil && line.count > 3 {
+                 let temp = Event(name: line, dayNum: daysCount + 1)
+                _events.append(temp)
+             }
+            
+            if parsingDays {
                 // Add line to the current day only if we have started parsing days
                 currentDay += line + "\n"
                 
@@ -123,6 +122,10 @@ class ParseChunk: NSObject {
     
     func getPeriods() -> [String] {
         return _periods
+    }
+    
+    func getEvents() -> [Event] {
+        return _events
     }
     
     func printInput(){

@@ -35,21 +35,7 @@
          if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
              eventScraper?.scrapeData(from: url)
          }
-         
-         
-         
-         
-         // Start scraping and printing from the WebScraper class
-         
-         /*
-         webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
-         */
-          
-         print("Event Screen Loaded")
-         
-         print("Second Check")
 
-         
      }
      
      func handleScrapedData(_ data: String) {
@@ -57,14 +43,17 @@
          parseChunk.parseMonth()
        //  parseChunk.printInput()
          
-         eLab.text = data
+         
+         var labelText = ""
+         
+         for event in parseChunk.getEvents() {
+             labelText += "\(event.getDayNum()) Nov - " + event.getName() + "\n"
+         }
          
          
-        
-         // Method to display data to Events Page
+         eLab.text = labelText
          
          
-         //print("Scraped Data: \(data)")
          
 
      }
