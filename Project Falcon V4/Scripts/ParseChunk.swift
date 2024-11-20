@@ -29,15 +29,20 @@ class ParseChunk: NSObject {
         var _parsedDays: [String] = []
         let stringArray = inputString.components(separatedBy: "\n")
         
+        var dayChunks : [String] = []
+        
         var daysCount: Int = 0
         var currentDay: String = ""
         let currentMonthInt: Int = Calendar.current.component(.month, from: Date())
         let currentMonth: String = intToMonth(intInQuestion: currentMonthInt)
         var index = 0
+        
         var parsingDays = false // Flag to start parsing after the first day is detected
 
         while index < stringArray.count {
             let line = stringArray[index].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
             
             // Check if the line starts with "{Month Name}"
             if line.starts(with: currentMonth) {
@@ -48,6 +53,9 @@ class ParseChunk: NSObject {
                     _parsedDays.append(currentDay)
                     if let dayNumber = extractDay(from: line, withMonth: currentMonth) {
                         let temp = ParseDay(day: dayNumber, month: currentMonth, chunk: currentDay)
+                        
+                        dayChunks.append(temp.getChunk())
+                        
                         _parsedDay.append(temp)
                         daysCount += 1
                         
@@ -69,6 +77,7 @@ class ParseChunk: NSObject {
                  let temp = Event(name: line, dayNum: daysCount + 1)
                 _events.append(temp)
              }
+            
             
             if parsingDays {
                 // Add line to the current day only if we have started parsing days
@@ -95,6 +104,13 @@ class ParseChunk: NSObject {
             let periods = currentCD.getPeriods()
             _periods = periods
         }
+        
+        for chunk in dayChunks {
+            print(chunk + "\n")
+        }
+        
+        
+        //print(dayChunks)
     }
     
     func extractDay(from line: String, withMonth monthAbbreviation: String) -> Int? {

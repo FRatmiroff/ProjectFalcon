@@ -62,5 +62,9 @@ class ParseDay: NSObject {
         }
         return 0 // Return 0 if something goes wrong
     }
+    
+    func getChunk() -> String {
+        return _chunk
+    }
 
 }
