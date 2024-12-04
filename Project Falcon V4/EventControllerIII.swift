@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScrollViewViewController: UIViewController {
+class EventControllerIII: UIViewController {
 
     var eventScraper: Scraper!
     var parseChunk: ParseChunk!
@@ -40,8 +40,8 @@ class ScrollViewViewController: UIViewController {
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12)
         ])
 
         // Set up the UILabel
@@ -58,7 +58,7 @@ class ScrollViewViewController: UIViewController {
         NSLayoutConstraint.activate([
             eLab.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             eLab.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            eLab.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
+            eLab.topAnchor.constraint(equalTo: scrollView.topAnchor),
             eLab.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
             eLab.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32) // Ensures proper scrolling
         ])
@@ -138,7 +138,7 @@ class ScrollViewViewController: UIViewController {
 
         }
 
-        var labelText = "\n\n\n"
+        var labelText = ""
         // Print out the events
 
         for event in events {
@@ -158,13 +158,6 @@ class ScrollViewViewController: UIViewController {
         
         
         eLab.text = labelText
-        
-        
-        
-        
-        
-        
-
     }
 
     
