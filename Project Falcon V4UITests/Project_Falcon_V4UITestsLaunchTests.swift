@@ -8,7 +8,7 @@
 import XCTest
 
 final class Project_Falcon_V4UITestsLaunchTests: XCTestCase {
-
+    
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

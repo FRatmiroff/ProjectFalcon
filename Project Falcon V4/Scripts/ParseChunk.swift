@@ -106,7 +106,7 @@ class ParseChunk: NSObject {
         }
         
         for chunk in dayChunks {
-            print(chunk + "\n")
+    //        print(chunk + "\n")
         }
         
         

@@ -51,9 +51,9 @@ class Scraper: NSObject, WKNavigationDelegate {
     // Method to print the scraped data
     func printScrapedData() {
         if let data = onDataScraped {
-           print("Scraped Data: \(data)")
+     //      print("Scraped Data: \(data)")
         } else {
-            print("No Valid Data Scraped")
+  //          print("No Valid Data Scraped")
         }
     }
 }
