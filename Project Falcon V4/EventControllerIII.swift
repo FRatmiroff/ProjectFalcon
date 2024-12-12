@@ -21,22 +21,7 @@ class EventControllerIII: UIViewController {
         super.viewDidLoad()
         
         let value = DataManager.shared.globalData
-        print("BEGIN DATA")
-        print(value)
-        print("END DATA")
-      /*
-        eventScraper = Scraper()
-        
-        eventScraper?.onDataScraped = { [weak self] data in
-            guard let self = self, let scrapedData = data else { return }
-            self.scrapedDataString = scrapedData
-    //        self.handleScrapedData(scrapedData)
-        }*/
         self.handleScrapedData(value)
-        /*
-        if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
-            eventScraper?.scrapeData(from: url)
-        }*/
         
         // Set up the UIScrollView
         let scrollView = UIScrollView()
@@ -152,7 +137,7 @@ class EventControllerIII: UIViewController {
         for event in events {
             labelText += "---------------------------------\n"
             labelText += "Sport Title: \(event.sportTitle)\n"
-            labelText += "Time: \(event.time)"
+            labelText += "Time: \(event.time)\n"
             labelText += "Home or Away: \(event.homeOrAway)\n"
             labelText += "Location: \(event.location)\n"
             labelText += "Opposing Team: \(event.opposingTeam)\n"

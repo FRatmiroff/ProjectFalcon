@@ -21,52 +21,27 @@ class LabelController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-       // loadData()
-        
-        
         webScraper = Scraper()
-        
-        
         webScraper?.onDataScraped = { [weak self] data in
             guard let self = self, let scrapedData = data else { return }
             
             DataManager.shared.globalData = scrapedData
             
             self.scrapedDataString = scrapedData
-            self.handleScrapedData(scrapedData)
+           // self.handleScrapedData(scrapedData)
         }
         
         if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
             webScraper?.scrapeData(from: url)
         }
-        
-        
-        
-        
-        // Start scraping and printing from the WebScraper class
-        
-        /*
-         webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
-         */
-        
- //       print("Home Screen Loaded")
-        
-    //    print("Second Check")
-        
-        
+        handleScrapedData(DataManager.shared.globalData)
     }
     
     func handleScrapedData(_ data: String) {
         parseChunk = ParseChunk(scrapedData: data)
         parseChunk.parseMonth()
-        // parseChunk.printInput()
         updateScheduleLabel()
-        //print("Scraped Data: \(data)")
-        
-        
     }
-    
     
     
     // Function to update the label text based on the day of the week
@@ -107,22 +82,9 @@ class LabelController: UIViewController, WKNavigationDelegate {
     func getLabelString() -> String {
         var ret: String = ""
         let per = parseChunk.getPeriods()
-        // print(parseChunk.getPeriods())
         for String in per {
             ret += String + " "
         }
         return ret
-    }
-    
-    func loadData() {
-        // Simulate data loading
-        DispatchQueue.global().async {
-            // Load your data here (e.g., network requests or file reading)
-            Thread.sleep(forTimeInterval: 2) // Simulated delay
-            
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "ShowHomeScreen", sender: nil)
-            }
-        }
     }
 }
