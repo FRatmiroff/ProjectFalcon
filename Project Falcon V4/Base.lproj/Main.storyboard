@@ -360,6 +360,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="progressbar" destination="gUm-uc-vGz" id="Lq3-4I-opq"/>
                         <segue destination="var-V6-tjc" kind="presentation" identifier="Transition" modalPresentationStyle="fullScreen" id="Cah-7Z-dpz"/>
                     </connections>
                 </viewController>
