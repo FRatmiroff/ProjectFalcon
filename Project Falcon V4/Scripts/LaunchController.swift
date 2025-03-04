@@ -11,6 +11,8 @@ import UIKit
 class LaunchController: UIViewController {
     // Schedule ViewController
  
+    var webScraper: Scraper?
+    
     //@IBOutlet weak var homecontroller : ViewController!
     @IBOutlet weak var progressbar: UIProgressView!
     
@@ -19,7 +21,21 @@ class LaunchController: UIViewController {
 
         self.progressbar.setProgress(0.0, animated: false)
         
-        //homecontroller.preload()
+        
+        webScraper = Scraper()
+        webScraper?.onDataScraped = { [weak self] data in
+            guard let self = self, let scrapedData = data else { return }
+            
+            DataManager.shared.globalData = scrapedData
+            
+            // self.scrapedDataString = scrapedData
+        }
+        
+        if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
+            webScraper?.scrapeData(from: url)
+        }
+        
+        
         
         let barTime = 5.0 // in Seconds
         
@@ -28,8 +44,6 @@ class LaunchController: UIViewController {
                 self.progressbar.setProgress(Float(x)/100.0, animated: true)
                 }
         }
-        
-        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + barTime + 0.5) {
             self.performSegue(withIdentifier: "Transition", sender: self)
