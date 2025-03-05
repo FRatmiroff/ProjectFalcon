@@ -14,7 +14,9 @@ class Event2 {
 
     var time: String
     
-    //var date: String
+    var date: Int
+    
+    var month: String
 
     var homeOrAway: String
 
@@ -24,12 +26,16 @@ class Event2 {
 
     
 
-    init(sportTitle: String, time: String, homeOrAway: String, location: String, opposingTeam: String) {
+    init(sportTitle: String, time: String, date: Int, month: String, homeOrAway: String, location: String, opposingTeam: String) {
 
         self.sportTitle = sportTitle
 
         self.time = time
 
+        self.date = date
+        
+        self.month = month
+        
         self.homeOrAway = homeOrAway
 
         self.location = location

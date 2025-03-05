@@ -11,6 +11,7 @@ import Foundation
 class ParseChunk: NSObject {
     private var _parsedDay : [ParseDay] = []
     private var _events : [Event] = []
+    private var _sportEvents : [Event2] = []
     private var todayIndex : Int = 0
     private var _periods : [String] = []
     private var inputString = ""
@@ -37,6 +38,9 @@ class ParseChunk: NSObject {
         let currentMonth: String = intToMonth(intInQuestion: currentMonthInt)
         var index = 0
         
+        var justDay : Int = 0
+        var fullDay : String = ""
+        
         var parsingDays = false // Flag to start parsing after the first day is detected
 
         while index < stringArray.count {
@@ -60,7 +64,7 @@ class ParseChunk: NSObject {
                         daysCount += 1
                         
                         let day = Calendar.current.component(.day, from: Date())
-                       
+                        
                         // Update which day is today
                         if dayNumber == day && daysCount > 0 {
                             todayIndex = daysCount
@@ -70,13 +74,23 @@ class ParseChunk: NSObject {
                 
                 // Start a new day with the current line
                 currentDay = line + "\n"
+                if let _day = extractDay(from: line, withMonth: currentMonth) {
+                    justDay = _day
+                }
+                fullDay = line
+                
+            } else {
+                
+                trySportEvent(lines: stringArray, index: index, day: justDay, fday: fullDay)
+                
+                
+                // Gets all uppercased lines (for events)
+                if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil && line.count > 3 && index > 40 {
+                    let temp = Event(name: line, dayNum: daysCount + 1)
+                    _events.append(temp)
+                }
+                
             }
-            
-            // Gets all uppercased lines (for events)
-            else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil && line.count > 3 && index > 40 {
-                 let temp = Event(name: line, dayNum: daysCount + 1)
-                _events.append(temp)
-             }
             
             
             if parsingDays {
@@ -113,6 +127,77 @@ class ParseChunk: NSObject {
         //print(dayChunks)
     }
     
+    
+    func trySportEvent(lines: [String], index: Int, day: Int, fday: String) {
+        var i = index
+        while i < index + 2 {
+            
+            let line = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
+            let sportTitlePattern = #"^[A-Z ]+- [A-Z]+, [A-Z]+$"#
+            
+            let regex = try! NSRegularExpression(pattern: sportTitlePattern)
+            
+            let range = NSRange(location: 0, length: line.utf16.count)
+            
+            
+            
+            if regex.firstMatch(in: line, options: [], range: range) != nil {
+                // Found a sport title
+                let sportTitle = line
+                
+                // Get the time
+                i += 1
+                guard i < lines.count else { break }
+                let time = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                // Get Home or Away
+                i += 1
+                guard i < lines.count else { break }
+                let homeOrAway = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                // Get location
+                i += 1
+                guard i < lines.count else { break }
+                var location = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                // Remove "Playing Fields - " prefix if present
+                if location.hasPrefix("Playing Fields - ") {
+                    location = location.replacingOccurrences(of: "Playing Fields - ", with: "")
+                }
+                
+                // Get the line with opposing team
+                i += 1
+                guard i < lines.count else { break }
+                let opposingLine = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                // Extract opposing team name from the line
+                var opposingTeam = ""
+                if let vsRange = opposingLine.range(of: "vs ") {
+                    opposingTeam = String(opposingLine[vsRange.upperBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
+                }
+                
+                // Create an Event object and add it to the list
+                
+                let event = Event2(
+                    sportTitle: sportTitle,
+                    time: time,
+                    date: day,
+                    month: fday,
+                    homeOrAway: homeOrAway,
+                    location: location,
+                    opposingTeam: opposingTeam
+                )
+                
+                _sportEvents.append(event)
+                
+            } else {
+                i += 1
+            }
+            
+        }
+    }
+    
+    
     func extractDay(from line: String, withMonth monthAbbreviation: String) -> Int? {
         let dayString = line.replacingOccurrences(of: monthAbbreviation, with: "")
         
@@ -142,6 +227,10 @@ class ParseChunk: NSObject {
     
     func getEvents() -> [Event] {
         return _events
+    }
+    
+    func getEvent2() -> [Event2]{
+        return _sportEvents
     }
     
     func printInput(){
