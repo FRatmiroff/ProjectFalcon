@@ -13,6 +13,8 @@ class Event2 {
     var sportTitle: String
 
     var time: String
+    
+    //var date: String
 
     var homeOrAway: String
 

@@ -35,8 +35,6 @@ class LaunchController: UIViewController {
             webScraper?.scrapeData(from: url)
         }
         
-        
-        
         let barTime = 5.0 // in Seconds
         
         for x in 0..<100{

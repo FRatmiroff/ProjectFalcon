@@ -60,7 +60,7 @@ class ParseChunk: NSObject {
                         daysCount += 1
                         
                         let day = Calendar.current.component(.day, from: Date())
-                        
+                       
                         // Update which day is today
                         if dayNumber == day && daysCount > 0 {
                             todayIndex = daysCount
@@ -73,7 +73,7 @@ class ParseChunk: NSObject {
             }
             
             // Gets all uppercased lines (for events)
-            else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil && line.count > 3 {
+            else if line == line.uppercased() && line != "" && line.range(of: #"\d"#, options: .regularExpression) == nil && line.count > 3 && index > 40 {
                  let temp = Event(name: line, dayNum: daysCount + 1)
                 _events.append(temp)
              }
@@ -147,4 +147,5 @@ class ParseChunk: NSObject {
     func printInput(){
         print(inputString)
     }
+    
 }

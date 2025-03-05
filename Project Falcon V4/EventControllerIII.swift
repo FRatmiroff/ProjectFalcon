@@ -69,7 +69,6 @@ class EventControllerIII: UIViewController {
         while i < lines.count {
             
             let line = lines[i].trimmingCharacters(in: .whitespacesAndNewlines)
-            
             let sportTitlePattern = #"^[A-Z ]+- [A-Z]+, [A-Z]+$"#
             
             let regex = try! NSRegularExpression(pattern: sportTitlePattern)
@@ -118,6 +117,7 @@ class EventControllerIII: UIViewController {
                 let event = Event2(
                     sportTitle: sportTitle,
                     time: time,
+                    //date: date
                     homeOrAway: homeOrAway,
                     location: location,
                     opposingTeam: opposingTeam
@@ -135,18 +135,19 @@ class EventControllerIII: UIViewController {
         // Print out the events
         
         for event in events {
-            labelText += "---------------------------------\n"
+            labelText += "\n"
             labelText += "Sport Title: \(event.sportTitle)\n"
             labelText += "Time: \(event.time)\n"
             labelText += "Home or Away: \(event.homeOrAway)\n"
             labelText += "Location: \(event.location)\n"
             labelText += "Opposing Team: \(event.opposingTeam)\n"
-            labelText += "---------------------------------\n\n"
+            labelText += "\n\n"
             
         }
         
+        
         for event in parseChunk.getEvents() {
-            labelText += "\(event.getDayNum()) Nov - " + event.getName() + "\n"
+            labelText += "\(event.getDayNum()) Mar - " + event.getName() + "\n"
         }
         
         
