@@ -71,17 +71,23 @@ class EventControllerIII: UIViewController {
         var labelText = ""
         // Print out the events
         
+        let filtering = true
+        
         for event in events {
             
-            labelText += "\n"
-            labelText += "Sport Title: \(event.sportTitle)\n"
-            labelText += "Time: \(event.time)\n"
-            labelText += "Date: \(event.month)\n"  // Use \(event.date) to get the numerical day, (consider adding day of the week?)
-            labelText += "Home or Away: \(event.homeOrAway)\n"
-            labelText += "Location: \(event.location)\n"
-            labelText += "Opposing Team: \(event.opposingTeam)\n"
-            labelText += "\n\n"
-            
+            // Filter days that are the same day
+            if !filtering || event.date == Calendar.current.component(.day, from: Date()) {
+                
+                labelText += "\n"
+                labelText += "Sport Title: \(event.sportTitle)\n"
+                labelText += "Time: \(event.time)\n"
+                labelText += "Date: \(event.month + " " + String(event.date))\n"  // Use \(event.date) to get the numerical day, (consider adding day of the week?)
+                labelText += "Home or Away: \(event.homeOrAway)\n"
+                labelText += "Location: \(event.location)\n"
+                labelText += "Opposing Team: \(event.opposingTeam)\n"
+                labelText += "\n\n"
+                
+            }
         }
         
  

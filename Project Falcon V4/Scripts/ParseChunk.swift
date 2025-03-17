@@ -26,6 +26,12 @@ class ParseChunk: NSObject {
         return months[ (intInQuestion-1) ]
     }
     
+    func intToFullMonth(intInQuestion: Int) -> String {
+        let months = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"]
+        return months[ (intInQuestion-1) ]
+    }
+    
     func parseMonth() {
         var _parsedDays: [String] = []
         let stringArray = inputString.components(separatedBy: "\n")
@@ -33,13 +39,16 @@ class ParseChunk: NSObject {
         var dayChunks : [String] = []
         
         var daysCount: Int = 0
+        
         var currentDay: String = ""
+        
         let currentMonthInt: Int = Calendar.current.component(.month, from: Date())
         let currentMonth: String = intToMonth(intInQuestion: currentMonthInt)
+        let currentFullMonth: String = intToFullMonth(intInQuestion: currentMonthInt)
+        
         var index = 0
         
         var justDay : Int = 0
-        var fullDay : String = ""
         
         var parsingDays = false // Flag to start parsing after the first day is detected
 
@@ -77,11 +86,10 @@ class ParseChunk: NSObject {
                 if let _day = extractDay(from: line, withMonth: currentMonth) {
                     justDay = _day
                 }
-                fullDay = line
-                
+
             } else {
                 
-                trySportEvent(lines: stringArray, index: index, day: justDay, fday: fullDay)
+                trySportEvent(lines: stringArray, index: index, day: justDay, fday: currentFullMonth)
                 
                 
                 // Gets all uppercased lines (for events)
