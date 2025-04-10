@@ -27,10 +27,15 @@
          
          // Start scraping and printing from the WebScraper class
          webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
-         
-        
      }
   
+     func preload() {
+         updateScheduleLabel()
+         webScraper = Scraper()
+         
+         // Start scraping and printing from the WebScraper class
+         webScraper.loadWebsite(urlString: "https://www.palmertrinity.org/news--calendar/calendar")
+     }
   
   
   // Function to update the label text based on the day of the week

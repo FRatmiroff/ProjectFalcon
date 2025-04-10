@@ -21,19 +21,21 @@ class LabelController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         webScraper = Scraper()
         webScraper?.onDataScraped = { [weak self] data in
             guard let self = self, let scrapedData = data else { return }
             
             DataManager.shared.globalData = scrapedData
             
-            self.scrapedDataString = scrapedData
-           // self.handleScrapedData(scrapedData)
+            // self.scrapedDataString = scrapedData
+            handleScrapedData(scrapedData)
         }
         
         if let url = URL(string: "https://www.palmertrinity.org/news--calendar/calendar") {
             webScraper?.scrapeData(from: url)
         }
+        */
         handleScrapedData(DataManager.shared.globalData)
     }
     

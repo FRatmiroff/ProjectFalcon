@@ -10,7 +10,6 @@
 		620604272CEFB22400B66492 /* EventControllerIII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620604262CEFB22400B66492 /* EventControllerIII.swift */; };
 		62791A7A2CAD8066008EE058 /* CycleDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A792CAD805C008EE058 /* CycleDays.swift */; };
 		62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7B2CAD8114008EE058 /* TimeFrame.swift */; };
-		62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7D2CAD83B9008EE058 /* TimePeriod.swift */; };
 		62791A802CB43AD6008EE058 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62791A7F2CB43AC5008EE058 /* LabelController.swift */; };
 		62AA6F8E2CCBEFD500C019E2 /* pts.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 62AA6F8D2CCBEFD500C019E2 /* pts.jpeg */; };
 		62AA6F902CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62AA6F8F2CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf */; };
@@ -75,7 +74,6 @@
 		620604262CEFB22400B66492 /* EventControllerIII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventControllerIII.swift; sourceTree = "<group>"; };
 		62791A792CAD805C008EE058 /* CycleDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDays.swift; sourceTree = "<group>"; };
 		62791A7B2CAD8114008EE058 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
-		62791A7D2CAD83B9008EE058 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		62791A7F2CB43AC5008EE058 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
 		62AA6F8D2CCBEFD500C019E2 /* pts.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pts.jpeg; sourceTree = "<group>"; };
 		62AA6F8F2CCBF21F00C019E2 /* Adobe Garamond Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adobe Garamond Pro Regular.ttf"; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				68C7635F2D09DEA400BB9C60 /* LaunchController.swift */,
 				687BF7BD2CE6306300AEE2F1 /* Event2.swift */,
 				68A0BAC32CDA8291002DA9B8 /* ChunkInQuestion.txt */,
-				62791A7D2CAD83B9008EE058 /* TimePeriod.swift */,
 				62791A7B2CAD8114008EE058 /* TimeFrame.swift */,
 				62791A792CAD805C008EE058 /* CycleDays.swift */,
 				AF4B528C2C9DA10A008658E4 /* ParseDay2.swift */,
@@ -401,7 +398,6 @@
 			files = (
 				62791A7C2CAD811A008EE058 /* TimeFrame.swift in Sources */,
 				62E349512D09D74F00B63524 /* DataManager.swift in Sources */,
-				62791A7E2CAD83C8008EE058 /* TimePeriod.swift in Sources */,
 				686C2E852CC035CD00EA2F07 /* SwipeController.swift in Sources */,
 				620604272CEFB22400B66492 /* EventControllerIII.swift in Sources */,
 				AF4B523B2C81FBC8008658E4 /* Project_Falcon_V4.xcdatamodeld in Sources */,
