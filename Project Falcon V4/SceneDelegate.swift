@@ -49,6 +49,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            let loadingVC = LoadingViewController()
+            window?.rootViewController = loadingVC
+            window?.makeKeyAndVisible()
+            return true
+        }
+
 
 }
 
